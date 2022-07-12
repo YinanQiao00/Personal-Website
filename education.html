@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <title>Education - Personal Website</title>
     <style>
-        * {border: 1px solid cornflowerblue;}
+        _* {border: 1px solid cornflowerblue;}
     </style>
 </head>
 
-<body>
-
+<body style="background-color:#BFD9D7;">
 <header>
     <!-- Personal Site Logo -->
     <a href="index.html" title="Go Back To Home Page">
-        <img src="assets/images/EmmaLogo.png" alt="personalLogo">
+        <figure>
+            <img src="assets/images/Yinan Logo.png" height="70" width="110" alt="personalLogo">
+            <figcaption>Yinan Qiao</figcaption>
+        </figure>
     </a>
 
     <!-- NavBar -->
-    <nav>
-        <ul>
-            <li><a href="aboutMe.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="workExperiences.html">Work Experiences</a></li>
-            <li><a href="contactMe.html">Contact Me</a></li>
-        </ul>
-    </nav>
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="workExperiences.html">Work Experiences</a></li>
+                <li><a href="contactMe.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </aside>
 
     <!--Search Bar-->
     <form action="http://httpbin.org/get" method="get ">
@@ -36,16 +40,64 @@
         </noscript>
     </form>
 
-    <h1>Header</h1>
+    <h1 align="center">Education</h1>
 </header>
 
 
 <main>
-    <h1>Education Page</h1>
+    <ol>
+    <hr/>
+    <section>
+        <li><h2>My University - University of California San Diego</h2></li>
+
+        <section>
+            <h3>Sep 2021 - Jun 2023, San Diego, CA</h3>
+        </section>
+        <section>
+            <h3>B.S. Computer Science</h3>
+        </section>
+        <section>
+            <h3>Website:</h3>
+                <iframe height="400" width="900" src="https://www.ucsd.edu" title="My University UCSD">
+                </iframe>
+        </section>
+
+    </section>
+
+    <hr/>
+    <section>
+        <li><h2>My College - Foothill College</h2></li>
+        <section>
+            <h3>Jan 2019 - Jun 2021, Los Altos, CA</h3>
+        </section>
+        <section>
+            <h3>A.S. Computer Science</h3>
+        </section>
+        <section>
+            <h3>Website:</h3>
+            <iframe height="400" width="900" src="https://www.foothill.edu" title="My College Foothill">
+            </iframe>
+        </section>
+    </section>
+
+    <hr/>
+    <section>
+        <li><h2>My High School - XinJiang Bingtuan No.2 High School</h2></li>
+        <section>
+            <h3>Sep 2016 - Dec 30 2019, Xinjiang, China</h3>
+        </section>
+    </section>
+
+    </ol>
 </main>
 
 <footer>
-    <h1>Footer</h1>
+    <hr/>
+    <pre align="center">
+        This page was made with<strong> &hearts;</strong> (and not many <code> &lt;div&gt;</code> tags) by <i>YinanQiao</i>
+
+                                                            -July 11 2022
+    </pre>
 </footer>
 
 </body>

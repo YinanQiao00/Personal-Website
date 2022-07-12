@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <title>Projects - Personal Website</title>
     <style>
-        * {border: 1px solid cornflowerblue;}
+        _* {border: 1px solid cornflowerblue;}
     </style>
 </head>
 
-<body>
-
+<body style="background-color:#BFD9D7;">
 <header>
     <!-- Personal Site Logo -->
     <a href="index.html" title="Go Back To Home Page">
-        <img src="assets/images/EmmaLogo.png" alt="personalLogo">
+        <figure>
+            <img src="assets/images/Yinan Logo.png" height="70" width="110" alt="personalLogo">
+            <figcaption>Yinan Qiao</figcaption>
+        </figure>
     </a>
 
     <!-- NavBar -->
-    <nav>
-        <ul>
-            <li><a href="aboutMe.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="workExperiences.html">Work Experiences</a></li>
-            <li><a href="contactMe.html">Contact Me</a></li>
-        </ul>
-    </nav>
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="workExperiences.html">Work Experiences</a></li>
+                <li><a href="contactMe.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </aside>
 
     <!--Search Bar-->
     <form action="http://httpbin.org/get" method="get ">
@@ -36,16 +40,73 @@
         </noscript>
     </form>
 
-    <h1>Header</h1>
+    <h1 align="center">Projects</h1>
 </header>
 
 
 <main>
-    <h1>Projects Page</h1>
+    <ol>
+        <hr/>
+        <section>
+            <li><h2>San Diego Zoo application Project</h2></li>
+            <section>
+                <h3>Apr 2022 - Jun 2022, UCSD, CA</h3>
+            </section>
+            <img src="assets/images/SDZoo.png" alt="Project1" height="250" width="900">
+            <section>
+                <ul>
+                    <li><p>Used Zenhub to manage group cooperation and keep track of working flow based on Behavior Drivem Development principle</p></li>
+                    <li><p>Translated UI/UX design wireframes into code to produce high quality app pages with AndroidStudio</p></li>
+                    <li><p>Implemented Algorithm approach to optimized the shortest visit path</p></li>
+                    <li><p>Created data base using JSON files to read and write data from</p></li>
+                    <li><p>Experienced in writing UI test and Unit test with tools: Junit, Espresso and Robolectric</p></li>
+                    <li><p>Worked closely with an agile team and provide end-to-end solutions for our clients</p></li>
+                </ul>
+            </section>
+        </section>
+
+        <hr/>
+        <section>
+            <li><h2>Todo List Android Application</h2></li>
+            <section>
+                <h3>Feb 2022 - Mar 2022, UCSD, CA</h3>
+            </section>
+            <img src="assets/images/Todo.png" alt="Project2" height="250" width="900">
+            <section>
+                <ul>
+                    <li><p>Accomplished the main functionalities where users can add,view and complete todo items</p></li>
+                    <li><p>Created functional UI todo list components and managed the states of todo items with recycleView and ViewModel</p></li>
+                    <li><p>Worked closely with front end development tools such as version control system with Github Repository and Github Actions CI</p></li>
+                </ul>
+            </section>
+        </section>
+
+        <hr/>
+        <section>
+            <li><h2>House Price Prediction Research Project</h2></li>
+            <section>
+                <h3>Sep 2020 - Dec 2020, Los Altos, CA</h3>
+            </section>
+            <img src="assets/images/house.png" alt="Project3" height="250" width="900">
+            <section>
+                <ul>
+                    <li><p>Developed different model using linear regression, polynomial regression,lasso,ridge regression to predict house price in California under the tutelage of PhD from UCLA</p></li>
+                    <li><p>Fetched messages from MongoDB to display historical messages when users open the conversation window with Axios</p></li>
+                    <li><p>Used nature language processing packages like NumPy sklearn and pandas,trained my model several times to let it fit the data and improve the accuracy of semantic analyze</p></li>
+                </ul>
+            </section>
+        </section>
+
+    </ol>
 </main>
 
 <footer>
-    <h1>Footer</h1>
+    <hr/>
+    <pre align="center">
+        This page was made with<strong> &hearts;</strong> (and not many <code> &lt;div&gt;</code> tags) by <i>YinanQiao</i>
+
+                                                            -July 11 2022
+    </pre>
 </footer>
 
 </body>

@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <title>Contact Me - Personal Website</title>
     <style>
-        * {border: 1px solid cornflowerblue;}
+        _* {border: 1px solid cornflowerblue;}
     </style>
 </head>
 
-<body>
-
+<body style="background-color:#BFD9D7;">
 <header>
     <!-- Personal Site Logo -->
     <a href="index.html" title="Go Back To Home Page">
-        <img src="assets/images/EmmaLogo.png" alt="personalLogo">
+        <figure>
+            <img src="assets/images/Yinan Logo.png" height="70" width="110" alt="personalLogo">
+            <figcaption>Yinan Qiao</figcaption>
+        </figure>
     </a>
 
     <!-- NavBar -->
-    <nav>
-        <ul>
-            <li><a href="aboutMe.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="workExperiences.html">Work Experiences</a></li>
-            <li><a href="contactMe.html">Contact Me</a></li>
-        </ul>
-    </nav>
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="workExperiences.html">Work Experiences</a></li>
+                <li><a href="contactMe.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </aside>
 
     <!--Search Bar-->
     <form action="http://httpbin.org/get" method="get ">
@@ -36,16 +40,95 @@
         </noscript>
     </form>
 
-    <h1>Header</h1>
+    <h1 align="center">Contact Me</h1>
 </header>
 
 
 <main>
-    <h1>Contact Me Page</h1>
+    <hr/>
+    <section>
+        <h2 align="center">Connect</h2>
+    </section>
+
+    <hr/>
+    <section>
+        <h2 align="center">Contact</h2>
+        <table align="center">
+            <colgroup>
+                <col span="1" style="background-color: lightskyblue">
+                <col style="background-color: lightblue">
+            </colgroup>
+            <caption>100% Authentic of Mine⬇️</caption>
+            <tr>
+                <th>Phone:</th>
+                <td>6502292748</td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td>yiqiao@ucsd.edu</td>
+            </tr>
+            <tr>
+                <th>Postal:</th>
+                <td>375 Camino De La Reina, San Diego, 92108, CA</td>
+            </tr>
+        </table>
+
+    </section>
+
+    <!--Send form-->
+    <hr/>
+    <section>
+        <h2 align="center">Talk To Me Now !</h2>
+        <form>
+            <div align="center">
+                <fieldset style="width: 500px">
+                    <legend align="center">Please fill out the following info and hit the button</legend>
+                    <!-- Enter your Full Name-->
+                    <label for="fname">Full name:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <!-- Enter your Email-->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <!-- Enter available position-->
+                    <label for="position">Choose an Available Position for me:</label>
+                    <select  name="position" id="position">
+                        <optgroup label="Tech roles">
+                            <option value="SDE">SDE</option>
+                            <option value="SDE intern">SDE intern</option>
+                            <option value="SDE intern">SDE intern</option>
+                        </optgroup>
+                    </select>
+                    <br><br>
+                    <!-- Enter your Role-->
+                    <label for="occupation">Choose your occupation from the list:</label>
+                    <input list="occupations" name="occupation" id="occupation">
+                    <datalist id="occupations">
+                        <option value="HR">
+                        <option value="Team Manager">
+                        <option value="Developer">
+                        <option value="CEO">
+                        <option value="Professor">
+                        <option value="Others">
+                    </datalist>
+                    <br><br>
+                    <!-- Enter your Message-->
+                    <label for="message">Send a Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="40"> Hello Yinan, </textarea><br>
+                    <input type="submit" value="Submit">
+                 </fieldset>
+            </div>
+        </form>
+    </section>
+
 </main>
 
 <footer>
-    <h1>Footer</h1>
+    <hr/>
+    <pre align="center">
+        This page was made with<strong> &hearts;</strong> (and not many <code> &lt;div&gt;</code> tags) by <i>YinanQiao</i>
+
+                                                            -July 11 2022
+    </pre>
 </footer>
 
 </body>
