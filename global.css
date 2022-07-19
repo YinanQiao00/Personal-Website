@@ -1,0 +1,9 @@
+:root {
+    --vw-lg: 1920px;
+    --vw-md: 1366px;
+    --vw-sm: 600px;
+}
+
+body {
+    background-color: #BFD9D7;
+}
