@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>About Me - Personal Website</title>
     <link href="assets/images/studentIcon.ico" rel="icon" />
-    <link rel = “stylesheet” media = “screen” href = “global.css” type = “text/css”>
+    <link rel="stylesheet" href="global.css"/>
 </head>
 
-<body>
+<body id="bodyOfWebsite">
 <header>
     <!-- Personal Site Logo -->
     <a href="index.html" title="Go Back To Home Page">
@@ -19,7 +19,7 @@
 
     <!-- NavBar -->
     <aside>
-        <nav>
+        <nav class="myNavbar">
             <ul>
                 <li><a href="aboutMe.html">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -40,30 +40,25 @@
 <!--    </form>-->
 
     <!-- div tag for centralize everything-->
-    <div>
-
         <h1 >About Me - Yinan Qiao</h1>
-
-        <!-- help user to pronouce my name-->
-        <p>Click on the play button to pronounce my last name "Qiao":</p>
-        <audio controls>
-            <source src="assets/audios/pronounceMyLastName.m4a" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-
-        <!-- My picture -->
-        <picture>
-            <source media="(min-width:1080px)" srcset="assets/images/myMiddlePic.JPG" >
-            <source media="(min-width:650px)" srcset="assets/images/mySmallPic.JPG">
-            <img src="assets/images/myTinyImage.jpeg" alt="Yinan's photo" style="width:auto;">
-        </picture>
-
-    </div>
-
 </header>
 
 
 <main>
+    <!-- help user to pronouce my name-->
+    <p>Click on the play button to pronounce my last name "Qiao":</p>
+    <audio controls>
+        <source src="assets/audios/pronounceMyLastName.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- My picture -->
+    <picture>
+        <source media="(min-width:1080px)" srcset="assets/images/myMiddlePic.JPG" >
+        <source media="(min-width:650px)" srcset="assets/images/mySmallPic.JPG">
+        <img src="assets/images/myTinyImage.jpeg" alt="Yinan's photo" style="width:100%;">
+    </picture>
+
     <section>
         <h2>Hi there!</h2>
         <section>
@@ -99,9 +94,6 @@
         <img src="assets/images/WechatIMG910.jpeg" alt="Yinan's photo" height="400" width="600">
         <img src="assets/images/mySmallPic.JPG" alt="Yinan's photo" height="400" width="550">
         <img src="assets/images/WechatIMG912.jpeg" alt="Yinan's photo" height="400" width="550">
-
-
-
     <hr/>
     <!--button for download my resume-->
         <p>Click here ⬇️ to download my resume.

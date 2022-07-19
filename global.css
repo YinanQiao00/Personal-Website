@@ -1,9 +1,67 @@
-:root {
+ :root {
     --vw-lg: 1920px;
     --vw-md: 1366px;
     --vw-sm: 600px;
+     --my-background-color: #d5e1dd;
+     --my-text-color: #102E37;
+
+ }
+
+ /*@font-face {*/
+ /*    font-family: mainFont;*/
+ /*    src: url(); !*URL to font*!*/
+ /*}*/
+ a { text-decoration: none;
+     color: #FFFFFF;
+ }
+
+ #bodyOfWebsite {
+     width: var(--vw-lg);
+     background-image: url("assets/images/myCloud.jpg" );
+     background-size: 150%;
+    /*background-color: var(--my-background-color);*/
+ }
+
+ #websiteLogo {
+     text-align: left;
+ }
+
+ body header h1{
+     text-align: center;
+     font-size: 4em;
+     color: #032030;
+ }
+
+ .myNavbar > ul{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #8ac6d1;
+     padding: 0.5rem;
 }
 
-body {
-    background-color: #BFD9D7;
-}
+  ul > li {
+      width: calc(var(--vw-lg) / 5);
+     margin: 0.2em;
+     text-align: center;
+     line-height: 2vh;
+     font-size: 3vh;
+ }
+ ul > li > a:hover{
+
+     color: #747e80;
+     /*border: 1px solid #747e80;*/
+ }
+
+main{
+     text-align: center;
+     color: var(--my-text-color);
+     font-size: 1em;
+     /*padding: 0.2rem;*/
+ }
+
+ footer{
+     text-align: center;
+     color: var(--my-text-color);
+     font-size: 0.7em;
+     /*padding: 0.2rem;*/
+ }
