@@ -267,7 +267,7 @@ fieldset {
     /*display: flex;*/
     /*flex-direction: column;*/
     /*align-items: center;*/
-    /*width: 50em;*/
+    /*width: 40em;*/
 }
 .contentInfo:after{
     content: "";
