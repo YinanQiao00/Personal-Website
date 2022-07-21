@@ -2,141 +2,195 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Me - Personal Website</title>
     <link href="assets/images/studentIcon.ico" rel="icon" />
     <link rel="stylesheet" href="global.css"/>
+    <script>
+        class AllIntros extends HTMLDivElement {}
+        customElements.define("all-intros", AllIntros, {extends: 'div'});
+
+        class MyIntro extends HTMLElement {}
+        customElements.define("my-intro", MyIntro, {extends: 'div'});
+
+        class IntroTitle extends HTMLElement {}
+        customElements.define("intro-title", IntroTitle, {extends: 'div'});
+
+        class IntroImage extends HTMLElement {}
+        customElements.define("intro-image", IntroImage, {extends: 'div'});
+
+        class WorkDescription extends HTMLElement {}
+        customElements.define("intro-description", WorkDescription, {extends: 'div'});
+
+        class PageFooter extends HTMLDivElement {}
+        customElements.define("page-footer", PageFooter, {extends: 'div'});
+    </script>
 </head>
 
 <body id="bodyOfWebsite">
-<header>
-    <!-- Personal Site Logo -->
-    <a href="index.html" title="Go Back To Home Page">
-        <figure>
-            <img src="assets/images/YinanLogo.png" height="70" width="110" alt="personalLogo">
-            <figcaption>Yinan Qiao</figcaption>
-        </figure>
-    </a>
+
+<header id="headerOfBody">
+
 
     <!-- NavBar -->
-    <aside>
-        <nav class="myNavbar">
-            <ul>
-                <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="workExperiences.html">Work Experiences</a></li>
-                <li><a href="contactMe.html">Contact Me</a></li>
-            </ul>
-        </nav>
-    </aside>
+    <my-nav class="myNavbar">
+        <ul>
+            <li><a id="websiteLogo" href="index.html" title="Go Back To Home Page">
+                <img src="assets/images/YinanLogo.png" alt="personalLogo">
+            </a></li>
+            <li><a href="aboutMe.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="workExperiences.html">Work Experiences</a></li>
+            <li><a href="contactMe.html">Contact Me</a></li>
+        </ul>
+    </my-nav>
 
-<!--    &lt;!&ndash;Search Bar&ndash;&gt;-->
-<!--    <form action="http://httpbin.org/get" method="get ">-->
-<!--        <label for="query">Search</label>-->
-<!--        <input type="search" id="query" name="query" autofocus>-->
-<!--        <noscript>-->
-<!--            <input type="submit" value="Search">-->
-<!--        </noscript>-->
-<!--    </form>-->
-
-    <!-- div tag for centralize everything-->
-        <h1 >About Me - Yinan Qiao</h1>
-</header>
-
-
-<main>
+    <h1 >About Me - Yinan Qiao</h1>
     <!-- help user to pronouce my name-->
     <p>Click on the play button to pronounce my last name "Qiao":</p>
     <audio controls>
         <source src="assets/audios/pronounceMyLastName.m4a" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+</header>
 
-    <!-- My picture -->
-    <picture>
-        <source media="(min-width:1080px)" srcset="assets/images/myMiddlePic.JPG" >
-        <source media="(min-width:650px)" srcset="assets/images/mySmallPic.JPG">
-        <img src="assets/images/myTinyImage.jpeg" alt="Yinan's photo" style="width:100%;">
-    </picture>
 
-    <section>
-        <h2>Hi there!</h2>
-        <section>
-            <h3>It's Yinan speaking,</h3>
-            <p> I’m a Senior from UC San Diego with a degree in Computer Science. I excel at java and c++, I also enrolled various courses such as data structure and algorithm, software design, Object-Orient programming method, operating System and etc which helped a lot for building my develop skills.
-                I taught my self Python language. My goal is to become a full stack developer and I’m so excited about paticipating in those amazing projects of your company. Please <a href="contactMe.html">contact me</a> if you are interested in knowing more about me!
+<main>
+    <all-intros class="column">
+        <my-intro class="row">
+            <intro-title class="subTitle">
+                <h2>Hi there! It's Yinan speaking,</h2>
+            </intro-title>
+            <intro-description class="contentInfo"><p>
+ &nbsp;&nbsp;&nbsp;&nbsp;I’m a Senior from UC San Diego with a degree in Computer Science.
+ I excel at java and c++, I also enrolled various courses such as
+ data structure and algorithm, software design, Object-Orient programming method,
+ operating System and etc which helped a lot for building my develop skills.
+ I taught my self Python language. My goal is to become a full stack developer
+ and I’m so excited about paticipating in those amazing projects of your company.
+ Please <a href="contactMe.html"><b>contact me</b></a> if you are interested in knowing
+ more about me!
             </p>
-        </section>
-    </section>
-    <hr/>
-    <section>
-        <h2>Skills</h2>
-        <details>
-            <summary>Programming Languages:</summary>
-            <p>Java, C++, Python, HTML, CSS, JavaScript, MySQL, R, Linux, Git</p>
-        </details>
-        <details>
-            <summary>Development Software: </summary>
-            <p>IntelliJ, Xcode, Eclipse, Atoms, Terminal, AndroidStudio, Zenhub, WebStorm, VSCode</p>
-        </details>
-        <details>
-            <summary>Languages: </summary>
-            <p>English, Mandarin</p>
-        </details>
-        <details>
-            <summary>Soft Skills: </summary>
-            <p>Communication, Team Work, Logic Thinking, Problem-Solving, Research</p>
-        </details>
-    </section>
+            </intro-description>
 
-    <!-- photo gallery-->
-    <hr/>
-        <img src="assets/images/WechatIMG910.jpeg" alt="Yinan's photo" height="400" width="600">
-        <img src="assets/images/mySmallPic.JPG" alt="Yinan's photo" height="400" width="550">
-        <img src="assets/images/WechatIMG912.jpeg" alt="Yinan's photo" height="400" width="550">
-    <hr/>
-    <!--button for download my resume-->
-        <p>Click here ⬇️ to download my resume.
-            <!--inline tag contains svg tag-->
-            <svg width="100" height="100"><circle cx="30" cy="30" r="20" stroke="orange" stroke-width="3" fill="yellow" />
-            </svg>
-        </p>
-        <button type="button" onclick="alert('This Button Will Be Used For Downloading Resume Later.')">Download</button>
+            <hr/>
 
+            <intro-title class="subTitle">
+                <h2>Skills</h2>
+            </intro-title>
+            <intro-description class="contentInfo">
+                <details>
+                    <summary>Programming Languages:</summary>
+                    <p>Java, C++, Python, HTML, CSS, JavaScript, MySQL, R, Linux, Git</p>
+                </details>
+                <details>
+                    <summary>Development Software: </summary>
+                    <p>IntelliJ, Xcode, Eclipse, Atoms, Terminal, AndroidStudio, Zenhub, WebStorm, VSCode</p>
+                </details>
+                <details>
+                    <summary>Languages: </summary>
+                    <p>English, Mandarin</p>
+                </details>
+                <details>
+                    <summary>Soft Skills: </summary>
+                    <p>Communication, Team Work, Logic Thinking, Problem-Solving, Research</p>
+                </details>
+                <br/>
+            </intro-description>
+
+            <hr/>
+            <intro-title class="subTitle">
+                <h2>Don't Forget To Download My Resume Before You Go!</h2>
+            </intro-title>
+            <intro-description class="contentInfo">
+                <!--button for download my resume-->
+                <p>Click here ⬇️ to download my resume.</p>
+                <div class="downloadBtn">
+                        <a href="assets/file/Yinan's%20Resume%202022%20copy.pdf" class="button" download>
+                            Download Resume
+                        </a>
+                </div>
+
+            </intro-description>
+            <hr/>
+
+            <intro-title class="subTitle">
+                <h2>Photos</h2>
+            </intro-title>
+            <intro-image class="aboutContentImage">
+                <div class="gallery">
+                    <img src="assets/images/WechatIMG910.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/mySmallPic.JPG" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG915.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/myMiddlePic.JPG" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG918.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG909.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG911.jpeg" alt="Yinan's photo" style="width:100%">
+                </div>
+                <div class="gallery">
+                    <img src="assets/images/WechatIMG919.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG921.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG922.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG917.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG916.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG920.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG923.jpeg" alt="Yinan's photo" style="width:100%">
+                </div>
+                <div class="gallery">
+                    <img src="assets/images/WechatIMG910.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/mySmallPic.JPG" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG915.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/myMiddlePic.JPG" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG918.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG909.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG911.jpeg" alt="Yinan's photo" style="width:100%">
+                </div>
+                <div class="gallery">
+                    <img src="assets/images/WechatIMG919.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG921.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG922.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG917.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG916.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG920.jpeg" alt="Yinan's photo" style="width:100%">
+                    <img src="assets/images/WechatIMG923.jpeg" alt="Yinan's photo" style="width:100%">
+                </div>
+            </intro-image>
+        </my-intro>
+    </all-intros>
 
     <!--Video of my dog for fun-->
-    <hr/>
-    <section>
-        <h2>My yorkie's food channel if you are interested.</h2>
-        <video width="320" height="240" controls>
-            <source src="assets/videos/myYorkie.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <!--photo of my dog for fun-->
-        <p>Click the button below to display the hidden photo of Bambi.</p>
-        <button onclick="showContent()">Show hidden photo of Bambi</button>
-        <template>
-            <h2>Bambi</h2>
-            <img src="assets/images/WechatIMG913.jpeg" width="214" height="204">
-        </template>
-        <script>
-            function showContent() {
-                const temp = document.getElementsByTagName("template")[0];
-                const clon = temp.content.cloneNode(true);
-                document.body.appendChild(clon);
-            }
-        </script>
-    </section>
+<!--    <hr/>-->
+<!--    <section>-->
+<!--        <h2>My yorkie's food channel if you are interested.</h2>-->
+<!--        <video width="320" height="240" controls>-->
+<!--            <source src="assets/videos/myYorkie.mp4" type="video/mp4">-->
+<!--            Your browser does not support the video tag.-->
+<!--        </video>-->
+<!--        &lt;!&ndash;photo of my dog for fun&ndash;&gt;-->
+<!--        <p>Click the button below to display the hidden photo of Bambi.</p>-->
+<!--        <button onclick="showContent()">Show hidden photo of Bambi</button>-->
+<!--        <template>-->
+<!--            <h2>Bambi</h2>-->
+<!--            <img src="assets/images/WechatIMG913.jpeg" width="214" height="204">-->
+<!--        </template>-->
+<!--        <script>-->
+<!--            function showContent() {-->
+<!--                const temp = document.getElementsByTagName("template")[0];-->
+<!--                const clon = temp.content.cloneNode(true);-->
+<!--                document.body.appendChild(clon);-->
+<!--            }-->
+<!--        </script>-->
+<!--    </section>-->
 
 </main>
 
 <footer>
-    <hr/>
-    <pre>
-        This page was made with<strong> &hearts;</strong> (and not many <code> &lt;div&gt;</code> tags) by <i>YinanQiao</i>
-
-                                                            -July 11 2022
-    </pre>
+    <page-footer class="footer">
+        <hr/>
+        <p>This page was made with<strong> &hearts;</strong> (and not many <code> &lt;div&gt;</code> tags) by <i>YinanQiao</i></p>
+        <p>-July 11 2022</p>
+    </page-footer>
 </footer>
 
 </body>

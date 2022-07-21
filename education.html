@@ -2,81 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Education - Personal Website</title>
     <link href="assets/images/studentIcon.ico" rel="icon" />
     <link rel="stylesheet" href="global.css"/>
+    <script>
+        class AllSchools extends HTMLDivElement {}
+        customElements.define("all-schools", AllSchools, {extends: 'div'});
+
+        class MySchool extends HTMLElement {}
+        customElements.define("my-school", MySchool, {extends: 'div'});
+
+        class SchoolTitle extends HTMLElement {}
+        customElements.define("school-title", SchoolTitle, {extends: 'div'});
+
+        class SchoolImage extends HTMLElement {}
+        customElements.define("school-image", SchoolImage, {extends: 'div'});
+
+        class SchoolDescription extends HTMLElement {}
+        customElements.define("school-description", SchoolDescription, {extends: 'div'});
+
+        class PageFooter extends HTMLDivElement {}
+        customElements.define("page-footer", PageFooter, {extends: 'div'});
+    </script>
 </head>
 
 <body id="bodyOfWebsite">
-<header>
-    <!-- Personal Site Logo -->
-    <a href="index.html" title="Go Back To Home Page">
-        <figure>
-            <img src="assets/images/YinanLogo.png" height="70" width="110" alt="personalLogo">
-            <figcaption>Yinan Qiao</figcaption>
-        </figure>
-    </a>
+
+<header id="headerOfBody">
+
 
     <!-- NavBar -->
-    <aside>
-        <nav class="myNavbar">
-            <ul>
-                <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="workExperiences.html">Work Experiences</a></li>
-                <li><a href="contactMe.html">Contact Me</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-<!--    &lt;!&ndash;Search Bar&ndash;&gt;-->
-<!--    <form action="http://httpbin.org/get" method="get ">-->
-<!--        <label for="query">Search</label>-->
-<!--        <input type="search" id="query" name="query" autofocus>-->
-<!--        <noscript>-->
-<!--            <input type="submit" value="Search">-->
-<!--        </noscript>-->
-<!--    </form>-->
+    <my-nav class="myNavbar">
+        <ul>
+            <li><a id="websiteLogo" href="index.html" title="Go Back To Home Page">
+                <img src="assets/images/YinanLogo.png" alt="personalLogo">
+            </a></li>
+            <li><a href="aboutMe.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="workExperiences.html">Work Experiences</a></li>
+            <li><a href="contactMe.html">Contact Me</a></li>
+        </ul>
+    </my-nav>
 
     <h1>Education</h1>
 </header>
 
-
 <main>
-    <hr/>
-    <ol>
-        <li><pre><b>My University - University of California San Diego</b>
-Sep 2021 - Jun 2023, San Diego, CA
-B.S. Computer Science
-Website:
-<iframe height="400" width="900" src="https://www.ucsd.edu" title="My University UCSD">
-</iframe>
-        </pre></li>
+
+    <all-schools class="column">
 
 
-        <li><pre><b>My College - Foothill College</b>
-Jan 2019 - Jun 2021, Los Altos, CA
-A.S. Computer Science
-Website:
-<iframe height="400" width="900" src="https://www.foothill.edu" title="My College Foothill">
-</iframe>
-        </pre></li>
+        <my-school class="row">
+            <school-title class="subTitle">
+                <h2>My University - University of California San Diego: Sep 2021 - Jun 2023, San Diego, CA</h2>
+            </school-title>
+            <school-title class="subTitle">
+                <h2>B.S. Computer Science</h2>
+            </school-title>
 
+            <school-image class="schoolContentImage">
+                <iframe src="https://www.ucsd.edu" title="My University UCSD" style="width:100%">
+                </iframe>
+            </school-image>
 
-        <li><pre><b>My High School - XinJiang Bingtuan No.2 High School</b>
-Sep 2016 - Dec 30 2019, Xinjiang, China
-        </pre></li>
-    </ol>
+            <school-description class="contentInfo"><pre></pre>
+            </school-description>
+        </my-school>
+
+        <hr/>
+
+        <my-school class="row">
+            <school-title class="subTitle">
+                <h2>My College - Foothill College: Jan 2019 - Jun 2021, Los Altos, CA</h2>
+            </school-title>
+            <school-title class="subTitle">
+                <h2>A.S. Computer Science</h2>
+            </school-title>
+            <school-image class="schoolContentImage">
+                <iframe src="https://www.foothill.edu" title="My College Foothill" style="width:100%">
+                </iframe>
+            </school-image>
+            <school-description class="contentInfo"><pre></pre>
+            </school-description>
+        </my-school>
+
+        <hr/>
+
+        <my-school class="row">
+            <school-title class="subTitle">
+                <h2>My High School - XinJiang Bingtuan No.2 High School: Sep 2016 - Dec 30 2019, Xinjiang, China</h2>
+            </school-title>
+
+            <school-image class="contentImage">
+                <img></img>
+            </school-image>
+
+            <school-description class="contentInfo"><pre></pre>
+            </school-description>
+        </my-school>
+    </all-schools>
+
 </main>
 
 <footer>
-    <hr/>
-    <pre>
-        This page was made with<strong> &hearts;</strong> (and not many <code> &lt;div&gt;</code> tags) by <i>YinanQiao</i>
-
-                                                            -July 11 2022
-    </pre>
+    <page-footer class="footer">
+        <hr/>
+        <p>This page was made with<strong> &hearts;</strong> (and not many <code> &lt;div&gt;</code> tags) by <i>YinanQiao</i></p>
+        <p>-July 11 2022</p>
+    </page-footer>
 </footer>
 
 </body>

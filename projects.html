@@ -2,90 +2,139 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projects - Personal Website</title>
     <link href="assets/images/studentIcon.ico" rel="icon" />
     <link rel="stylesheet" href="global.css"/>
+    <script>
+        class AllProjects extends HTMLDivElement {}
+        customElements.define("all-projects", AllProjects, {extends: 'div'});
+
+        class MyProject extends HTMLElement {}
+        customElements.define("my-project", MyProject, {extends: 'div'});
+
+        class ProjectTitle extends HTMLElement {}
+        customElements.define("project-title", ProjectTitle, {extends: 'div'});
+
+        class ProjectImage extends HTMLElement {}
+        customElements.define("project-image", ProjectImage, {extends: 'div'});
+
+        class ProjectDescription extends HTMLElement {}
+        customElements.define("project-description", ProjectDescription, {extends: 'div'});
+
+        class PageFooter extends HTMLDivElement {}
+        customElements.define("page-footer", PageFooter, {extends: 'div'});
+    </script>
+
 </head>
 
 <body id="bodyOfWebsite">
-<header>
-    <!-- Personal Site Logo -->
-    <a href="index.html" title="Go Back To Home Page">
-        <figure>
-            <img src="assets/images/YinanLogo.png" height="70" width="110" alt="personalLogo">
-            <figcaption>Yinan Qiao</figcaption>
-        </figure>
-    </a>
+
+<header id="headerOfBody">
+
 
     <!-- NavBar -->
-    <aside>
-        <nav class="myNavbar">
-            <ul>
-                <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="workExperiences.html">Work Experiences</a></li>
-                <li><a href="contactMe.html">Contact Me</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-<!--    &lt;!&ndash;Search Bar&ndash;&gt;-->
-<!--    <form action="http://httpbin.org/get" method="get ">-->
-<!--        <label for="query">Search</label>-->
-<!--        <input type="search" id="query" name="query" autofocus>-->
-<!--        <noscript>-->
-<!--            <input type="submit" value="Search">-->
-<!--        </noscript>-->
-<!--    </form>-->
+    <my-nav class="myNavbar">
+        <ul>
+            <li><a id="websiteLogo" href="index.html" title="Go Back To Home Page">
+                <img src="assets/images/YinanLogo.png" alt="personalLogo">
+            </a></li>
+            <li><a href="aboutMe.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="workExperiences.html">Work Experiences</a></li>
+            <li><a href="contactMe.html">Contact Me</a></li>
+        </ul>
+    </my-nav>
 
     <h1>Projects</h1>
 </header>
 
 
-<main>
-    <hr/>
-    <ol>
-            <li><pre><b>San Diego Zoo application Project: Apr 2022 - Jun 2022, UCSD, CA</b>
-<img src="assets/images/SDZoo.png" alt="Project1" height="250" width="900">
-&#8226; Used Zenhub to manage group cooperation and keep track of working flow based on Behavior Drivem Development principle
-&#8226; Translated UI/UX design wireframes into code to produce high quality app pages with AndroidStudio
-&#8226; Implemented Algorithm approach to optimized the shortest visit path
-&#8226; Created data base using JSON files to read and write data from
-&#8226; Experienced in writing UI test and Unit test with tools: Junit, Espresso and Robolectric
-&#8226; Worked closely with an agile team and provide end-to-end solutions for our clients
-            </pre></li>
-<!--            <img src="assets/images/SDZoo.png" alt="Project1" height="250" width="900">-->
+<main id="mainOfWebsite">
+    <all-projects class="column">
+        <my-project class="row">
 
+            <project-title class="subTitle">
+                <h2>San Diego Zoo application Project: Apr 2022 - Jun 2022, UCSD, CA</h2>
+            </project-title>
 
+            <project-image class="contentImage">
+                <img src="assets/images/SDZoo.png" alt="Project1" height="250" width="900">
+            </project-image>
+            <projec-description class="contentInfo">
+                <p>
+                &#8226; Used Zenhub to manage group cooperation and keep track of working flow based on Behavior Drivem Development principle<br/>
+                &#8226; Translated UI/UX design wireframes into code to produce high quality app pages with AndroidStudio<br/>
+                &#8226; Implemented Algorithm approach to optimized the shortest visit path<br/>
+                &#8226; Created data base using JSON files to read and write data from<br/>
+                &#8226; Experienced in writing UI test and Unit test with tools: Junit, Espresso and Robolectric<br/>
+                &#8226; Worked closely with an agile team and provide end-to-end solutions for our clients<br/>
+                </p>
+            </projec-description>
+        </my-project>
 
+        <my-project class="row">
 
-        <li><pre><b>Todo List Android Application: Feb 2022 - Mar 2022, UCSD, CA</b>
-<img src="assets/images/Todo.png" alt="Project2" height="250" width="900">
-&#8226; Accomplished the main functionalities where users can add,view and complete todo items
-&#8226; Created functional UI todo list components and managed the states of todo items with recycleView and ViewModel
-&#8226; Worked closely with front end development tools such as version control system with Github Repository and Github Actions CI
-        </pre></li>
+            <project-title class="subTitle">
+                <h2>Todo List Android Application: Feb 2022 - Mar 2022, UCSD, CA</h2>
+            </project-title>
 
+            <project-image class="contentImage">
+                <img src="assets/images/Todo.png" alt="Project2" height="250" width="900">
+            </project-image>
+            <projec-description class="contentInfo">
+                <p>
+                &#8226; Accomplished the main functionalities where users can add,view and complete todo items<br/>
+                &#8226; Created functional UI todo list components and managed the states of todo items with recycleView and ViewModel<br/>
+                &#8226; Worked closely with front end development tools such as version control system with Github Repository and Github Actions CI
+                </p>
+            </projec-description>
+        </my-project>
 
+        <my-project class="row">
+            <project-title class="subTitle">
+                <h2>House Price Prediction Research Project: Sep 2020 - Dec 2020, Los Altos, CA</h2>
+            </project-title>
+            <project-image class="contentImage">
+                <img src="assets/images/house.png" alt="Project3" height="250" width="900">
+            </project-image>
+            <projec-description class="contentInfo"><p>
+                &#8226; Developed different model using linear regression, polynomial regression,lasso,ridge regression to predict house price in California under the tutelage of PhD from UCLA
+                <br/>
+                &#8226; Fetched messages from MongoDB to display historical messages when users open the conversation window with Axios
+                <br/>
+                &#8226; Used nature language processing packages like NumPy sklearn and pandas,trained my model several times to let it fit the data and improve the accuracy of semantic analyze
+                </p>
+            </projec-description>
+        </my-project>
 
-            <li><pre><b>House Price Prediction Research Project: Sep 2020 - Dec 2020, Los Altos, CA</b>
-<img src="assets/images/house.png" alt="Project3" height="250" width="900">
-&#8226; Developed different model using linear regression, polynomial regression,lasso,ridge regression to predict house price in California under the tutelage of PhD from UCLA
-&#8226; Fetched messages from MongoDB to display historical messages when users open the conversation window with Axios
-&#8226; Used nature language processing packages like NumPy sklearn and pandas,trained my model several times to let it fit the data and improve the accuracy of semantic analyze
-            </pre></li>
+        <my-project class="row">
 
-    </ol>
+            <project-title class="subTitle">
+                <h2></h2>
+            </project-title>
+
+            <project-image class="contentImage">
+                <img></img>
+            </project-image>
+
+            <projec-description class="contentInfo"><p>
+
+            </p>
+            </projec-description>
+        </my-project>
+
+    </all-projects>
+
 </main>
 
 <footer>
-    <hr/>
-    <pre>
-        This page was made with<strong> &hearts;</strong> (and not many <code> &lt;div&gt;</code> tags) by <i>YinanQiao</i>
-
-                                                            -July 11 2022
-    </pre>
+    <page-footer class="footer">
+        <hr/>
+        <p>This page was made with<strong> &hearts;</strong> (and not many <code> &lt;div&gt;</code> tags) by <i>YinanQiao</i></p>
+        <p>-July 11 2022</p>
+    </page-footer>
 </footer>
 
 </body>

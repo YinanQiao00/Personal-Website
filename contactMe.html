@@ -2,132 +2,170 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Me - Personal Website</title>
     <link href="assets/images/studentIcon.ico" rel="icon" />
     <link rel="stylesheet" href="global.css"/>
+    <script>
+        class AllContacts extends HTMLDivElement {}
+        customElements.define("all-contacts", AllContacts, {extends: 'div'});
+
+        class MyContact extends HTMLElement {}
+        customElements.define("my-contact", MyContact, {extends: 'div'});
+
+        class ContactTitle extends HTMLElement {}
+        customElements.define("contact-title", ContactTitle, {extends: 'div'});
+
+        class ContactImage extends HTMLElement {}
+        customElements.define("contact-image", ContactImage, {extends: 'div'});
+
+        class ContactDescription extends HTMLElement {}
+        customElements.define("contact-description", ContactDescription, {extends: 'div'});
+
+        class PageFooter extends HTMLDivElement {}
+        customElements.define("page-footer", PageFooter, {extends: 'div'});
+    </script>
 </head>
 
 <body id="bodyOfWebsite">
-<header>
-    <!-- Personal Site Logo -->
-    <a href="index.html" title="Go Back To Home Page">
-        <figure>
-            <img src="assets/images/YinanLogo.png" height="70" width="110" alt="personalLogo">
-            <figcaption>Yinan Qiao</figcaption>
-        </figure>
-    </a>
+<header id="headerOfBody">
+
 
     <!-- NavBar -->
-    <aside>
-        <nav class="myNavbar">
-            <ul>
-                <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="workExperiences.html">Work Experiences</a></li>
-                <li><a href="contactMe.html">Contact Me</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-<!--    &lt;!&ndash;Search Bar&ndash;&gt;-->
-<!--    <form action="http://httpbin.org/get" method="get ">-->
-<!--        <label for="query">Search</label>-->
-<!--        <input type="search" id="query" name="query" autofocus>-->
-<!--        <noscript>-->
-<!--            <input type="submit" value="Search">-->
-<!--        </noscript>-->
-<!--    </form>-->
+    <my-nav class="myNavbar">
+        <ul>
+            <li><a id="websiteLogo" href="index.html" title="Go Back To Home Page">
+                <img src="assets/images/YinanLogo.png" alt="personalLogo">
+            </a></li>
+            <li><a href="aboutMe.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="workExperiences.html">Work Experiences</a></li>
+            <li><a href="contactMe.html">Contact Me</a></li>
+        </ul>
+    </my-nav>
 
     <h1>Contact Me</h1>
 </header>
 
-
 <main>
-    <hr/>
-    <section>
-        <h2>Connect</h2>
-    </section>
+    <!--     Social media connects   -->
+    <all-contacts class="column">
+        <hr/>
+        <my-contact class="row">
+            <contact-title class="subTitle">
+                <h2>Connect</h2>
+            </contact-title>
 
-    <hr/>
-    <section>
-        <h2>Contact</h2>
-        <table>
-            <caption>100% Authentic of Mine⬇️</caption>
-            <colgroup>
-                <col span="1" style="background-color: lightskyblue">
-                <col style="background-color: lightblue">
-            </colgroup>
-            <tr>
-                <th>Phone:</th>
-                <td>6502292748</td>
-            </tr>
-            <tr>
-                <th>Email:</th>
-                <td>yiqiao@ucsd.edu</td>
-            </tr>
-            <tr>
-                <th>Postal:</th>
-                <td>375 Camino De La Reina, San Diego, 92108, CA</td>
-            </tr>
-        </table>
+            <contact-image class="contentImage">
+                <a href="https://www.instagram.com/zoe_qyn_/">
+                    <img src="assets/images/trans_ins_logo.png" alt="Direct to Instagram account" height="50" width="50">
+                </a>
+                <a href="https://www.linkedin.com/in/yinan-qiao-03a02319a/">
+                <img src="assets/images/kisspng-rsum-linkedin-computer-icons-social-media-the-linkdin-5b34f40d6ba2d2.9606998415301970054409.png" alt="Direct to Linkdin account" height="50" width="50">
+                </a>
+                <a href="https://github.com/YinanQiao00">
+                <img src="assets/images/github_trans_imag.png" alt="Direct to Github account" height="57" width="57">
+                </a>
+            </contact-image>
 
-    </section>
+            <contact-description class="contentInfo"><pre>
 
-    <!--Send form-->
-    <hr/>
-    <section>
-        <h2 >Talk To Me Now !</h2>
-        <form>
-            <div >
-                <fieldset style="width: 500px">
-                    <legend >Please fill out the following info and hit the button</legend>
-                    <!-- Enter your Full Name-->
-                    <label for="fname">Full name:</label>
-                    <input type="text" id="fname" name="fname"><br><br>
-                    <!-- Enter your Email-->
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email"><br><br>
-                    <!-- Enter available position-->
-                    <label for="position">Choose an Available Position for me:</label>
-                    <select  name="position" id="position">
-                        <optgroup label="Tech roles">
-                            <option value="SDE">SDE</option>
-                            <option value="SDE intern">SDE intern</option>
-                            <option value="SDE intern">SDE intern</option>
-                        </optgroup>
-                    </select>
-                    <br><br>
-                    <!-- Enter your Role-->
-                    <label for="occupation">Choose your occupation from the list:</label>
-                    <input list="occupations" name="occupation" id="occupation">
-                    <datalist id="occupations">
-                        <option value="HR">
-                        <option value="Team Manager">
-                        <option value="Developer">
-                        <option value="CEO">
-                        <option value="Professor">
-                        <option value="Others">
-                    </datalist>
-                    <br><br>
-                    <!-- Enter your Message-->
-                    <label for="message">Send a Message:</label><br>
-                    <textarea id="message" name="message" rows="4" cols="40"> Hello Yinan, </textarea><br>
-                    <input type="submit" value="Submit">
-                 </fieldset>
-            </div>
-        </form>
-    </section>
+            </pre>
+            </contact-description>
+        </my-contact>
+
+<!--        Contact infos-->
+        <hr/>
+        <my-contact class="row">
+            <contact-title class="subTitle">
+                <h2>Contact</h2>
+            </contact-title>
+
+            <contact-image class="contentImage">
+                <img></img>
+            </contact-image>
+
+            <contact-description class="contentInfo">
+                <table>
+                    <caption>100% Authentic of Mine⬇️</caption>
+                    <colgroup>
+                        <col>
+                    </colgroup>
+                    <tr>
+                        <th>Phone:</th>
+                        <td>6502292748</td>
+                    </tr>
+                    <tr>
+                        <th>Email:</th>
+                        <td>yiqiao@ucsd.edu</td>
+                    </tr>
+                    <tr>
+                        <th>Postal:</th>
+                        <td>375 Camino De La Reina, San Diego, 92108, CA</td>
+                    </tr>
+                </table>
+            </contact-description>
+        </my-contact>
+
+        <!--Send form-->
+        <hr/>
+        <my-contact class="row">
+            <contact-title class="subTitle">
+                <h2>Talk To Me Now !</h2>
+            </contact-title>
+
+            <contact-description class="contentInfo">
+                <form action="https://formsubmit.co/609091fdf1ae9f9b1af7a48e889ef594" method="POST">
+                        <fieldset>
+                            <legend >Please fill out your info and hit the button</legend>
+                            <!-- Enter your Full Name-->
+                            <label for="fname">Full name:</label>
+                            <input type="text" id="fname" name="fname" required><br><br>
+                            <!-- Enter your Email-->
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required><br><br>
+                            <!-- Enter available position-->
+                            <label for="position">Available Position for me:</label>
+                            <select  name="position" id="position">
+                                <optgroup label="Tech roles">
+                                    <option value="SDE">SDE</option>
+                                    <option value="SDE intern">SDE intern</option>
+                                    <option value="SDE intern">SDE intern</option>
+                                </optgroup>
+                            </select>
+                            <br><br>
+                            <!-- Enter your Role-->
+                            <label for="occupation">Choose your occupation from the list:</label>
+                            <input list="occupations" name="occupation" id="occupation" required>
+                            <datalist id="occupations">
+                                <option value="HR">
+                                <option value="Team Manager">
+                                <option value="Developer">
+                                <option value="CEO">
+                                <option value="Professor">
+                                <option value="Others">
+                            </datalist>
+                            <br><br>
+                            <!-- Enter your Message-->
+                            <label for="message">Send a Message:</label><br>
+                            <textarea id="message" name="message" rows="4" cols="30"> Hello Yinan, </textarea><br>
+                            <input type="submit" value="Submit">
+                         </fieldset>
+                </form>
+            </contact-description>
+        </my-contact>
+
+    </all-contacts>
 
 </main>
 
 <footer>
-    <hr/>
-    <pre>
-        This page was made with<strong> &hearts;</strong> (and not many <code> &lt;div&gt;</code> tags) by <i>YinanQiao</i>
-
-                                                            -July 11 2022
-    </pre>
+    <page-footer class="footer">
+        <hr/>
+        <p>This page was made with<strong> &hearts;</strong> (and not many <code> &lt;div&gt;</code> tags) by <i>YinanQiao</i></p>
+        <p>-July 11 2022</p>
+    </page-footer>
 </footer>
 
 </body>
