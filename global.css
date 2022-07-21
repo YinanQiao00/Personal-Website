@@ -59,7 +59,7 @@ audio:hover {
      list-style-type: none;
      align-items: center;
      text-align: center;
-     size: inherit;
+     /*size: inherit;*/
      margin: 0em;
      padding: 0em;
      overflow: hidden;
