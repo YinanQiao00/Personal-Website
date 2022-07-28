@@ -33,6 +33,7 @@ function clickPromptHandler() {
     }
 }
 
+
 function clickSaferPromptHandler() {
 
     let output = document.getElementById('saferPromptBtnOutput')

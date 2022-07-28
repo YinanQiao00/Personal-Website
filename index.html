@@ -6,6 +6,8 @@
     <title>YinanQiao's Website</title>
     <link href="assets/images/studentIcon.ico" rel="icon" />
     <link rel="stylesheet" href="global.css"/>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0" nonce="CL5e73pE"></script>
     <script>
         class AllIntros extends HTMLDivElement {}
         customElements.define("all-intros", AllIntros, {extends: 'div'});
@@ -87,6 +89,19 @@
             </intro-description>
             </my-intro>
     </all-intros>
+
+<!--Share button scripts-->
+    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+    </div>
+
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+    <script type="IN/Share" data-url="https://www.linkedin.com"></script>
+
+    <div data-layout="button_count" data-size="small">
+    <a style="align-content: center" href="https://twitter.com/intent/tweet?button_hashtag=ucsd&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #ucsd</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
 
 </main>
 

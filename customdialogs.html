@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>customdialogs</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.js"
+            integrity="sha512-TfORFichPEobARKaZePZQP81SQKQ10tm/ujRF1GTrl9oOATXE1EmCIfbvK4PSUtot0Xqm6Pp/MBnSH/ob9eTHQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer">
+    </script>
+    <script type="module" src="customdialogs.js"></script>
+
+</head>
+<body>
+<header><h1>Welcome To CSE134 HW4 Part2!!!</h1></header>
+    <h2> ~~~ Please click your favorite <b>CUSTOMIZED</b>./your buttons ~~~</h2>
+    <!--Alert Button-->
+    <button id="btnAlert">Alert</button><hr/>
+    <!--Confirm Button-->
+    <button id="btnConfirm">Confirm</button>
+    <output id="confirmBtnOutput">Waiting for confirm button to be clicked...</output><hr/>
+    <!--Safer Prompt Button, change name to prompt as matched the demo-->
+    <button id="btnSaferPrompt">Prompt</button>
+    <output id="saferPromptBtnOutput">Waiting for Safer prompt button to be clicked...</output><hr/>
+
+
+
+    <dialog id="alertBtnDialog">
+        <p>Customized Alert Button was Clicked!!</p>
+        <button id="okAlertBtn">Ok</button>
+    </dialog>
+
+    <dialog id="confirmBtnDialog">
+        <p>Customized Confirm Button was clicked!! Make your choice below!</p>
+        <button id="okConfirmBtn">Ok</button>
+        <button id="cancelConfirmBtn">Cancel</button>
+    </dialog>
+
+    <dialog id="promptBtnDialog">
+        <p>Customized Prompt Button was clicked!! What is your favorite pet?</p>
+        <input type="text" name="favPet" id="favPet">
+        <button id="okPromptBtn">Ok</button>
+        <button id="cancelPromptBtn">Cancel</button>
+    </dialog>
+
+</body>
+</html>
