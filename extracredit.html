@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./extracredit.js" type="module"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <title>extracredit</title>
+</head>
+
+<body>
+<div class="callout alert margin-bottom-2">
+    <p class="text-center">Please note that this will not cross the limit, currently set at <strong>0</strong> to <strong>20</strong>!</p>
+</div>
+
+<div class="flex-container align-center">
+    <div id="app">
+        <!-- Increase Counter, with an `increaseLimit` of 20 -->
+        <button @click="increaseCounter(20)" class="button rounded shadow success">
+            Increase
+        </button>
+        <!-- Decrease Counter, with an `decreaseLimit` of 0 -->
+        <button @click="decreaseCounter(0)" class="button rounded shadow warning">
+            Decrease
+        </button>
+        <button @click="resetCounter" class="button rounded shadow alert">
+            Reset
+        </button>
+        <p class="text-center">
+            Counter: {{ counter }} <br>
+            Result: {{ output }} <br>
+        </p>
+    </div>
+</div>
+
+
+</body>
+</html>

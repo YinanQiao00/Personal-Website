@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./methodtest.js" type="module"></script>
+    <title>Title</title>
+</head>
+<body>
+<header>
+
+</header>
+<main>
+    <form id="form">
+        <label for="id">ID:</label>
+        <input type="number" id="id" name="id"><br/><br/>
+
+        <label for="article_name">Article name:</label>
+        <input type="text" id="article_name" name="article_name"><br/><br/>
+
+        <label for="article_body">Article body:</label>
+        <textarea id="article_body" name="article_body" rows="2" cols="50"></textarea><br/><br/>
+
+        <label>Date</label><br/><br/>
+
+        <button type="submit" id="postBtn" class="">Post</button>
+        <button type="submit" id="getBtn" class="">Get</button>
+        <button type="submit" id="putBtn" class="">Put</button>
+        <button type="submit" id="deleteBtn" class="">Delete</button>
+        <fieldset>
+            <legend>Server Response</legend>
+            <ul id="response" style="white-space: pre"></ul>
+            <noscript>
+                <iframe id="response_frame" name="response_frame"></iframe>
+            </noscript>
+        </fieldset>
+    </form>
+
+</main>
+<footer>
+
+</footer>
+</body>
+</html>
